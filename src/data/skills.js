@@ -1,20 +1,19 @@
-// Add, remove, or edit skill groups and items freely.
 const skills = [
   {
     group: 'Languages',
-    items: ['JavaScript', 'TypeScript', 'Python', 'HTML', 'CSS'],
+    items: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
   },
   {
     group: 'Frontend',
-    items: ['React', 'Redux', 'Tailwind CSS', 'Vite'],
+    items: ['React', 'Responsive Design', 'CSS Animations'],
   },
   {
-    group: 'Backend',
-    items: ['Node.js', 'Express', 'REST APIs', 'MongoDB'],
+    group: 'CMS & Builders',
+    items: ['WordPress', 'Wix'],
   },
   {
-    group: 'Tools',
-    items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Figma'],
+    group: 'Tools & Design',
+    items: ['Figma', 'Photopea', 'Git', 'GitHub', 'VS Code'],
   },
 ]
 

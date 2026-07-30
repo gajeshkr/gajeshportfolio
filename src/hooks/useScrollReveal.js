@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
 
-// Watches every element with class="reveal" and adds "in-view" once it
-// scrolls into the viewport. Runs once, globally, after the page mounts.
 export default function useScrollReveal() {
   useEffect(() => {
-    const els = document.querySelectorAll('.reveal')
+    const selectors = ['.reveal', '.reveal-left', '.reveal-right', '.reveal-scale']
+    const els = document.querySelectorAll(selectors.join(', '))
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       els.forEach((el) => el.classList.add('in-view'))
@@ -20,10 +19,21 @@ export default function useScrollReveal() {
           }
         })
       },
-      { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
     )
 
     els.forEach((el) => observer.observe(el))
+
+    // Also immediately check elements already in viewport
+    setTimeout(() => {
+      els.forEach((el) => {
+        const rect = el.getBoundingClientRect()
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('in-view')
+        }
+      })
+    }, 100)
+
     return () => observer.disconnect()
   }, [])
 }
