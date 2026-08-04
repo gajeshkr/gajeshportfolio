@@ -1,67 +1,56 @@
-// Add your real projects here. Duplicate an object to add more.
-// To add images:
-// 1. Put your image files in src/assets/ folder (e.g., project1.png)
-// 2. Import them at the top here
-// 3. Use the imported name in the image field
-
-// Import your images like this:
-// import project1Img from '../assets/project1.png'
-// import project2Img from '../assets/project2.jpg'
-// import project3Img from '../assets/project3.png'
-
 const projects = [
   {
     title: 'Ground Water',
     description:
-      'A short, punchy description of what this project does and the problem it solves. Two sentences is plenty.',
-    tags: ['Wordpress', 'Acf Field', 'Html', 'Css', 'javascript', 'Php', 'MySQl','Elementor'],
-    image: '',  // ← yahan imported image daalo, e.g., project1Img
-    liveUrl: 'https://groundwaterindia.com/',  // ← Yahan apni website ka URL daalo
-    codeUrl: '',  // ← Optional: GitHub repo URL
+      'A web platform designed to spread awareness about water conservation. Built with responsive UI and clean design for better user experience.',
+    tags: ['WordPress', 'ACF Field', 'HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+    image: '',
+    liveUrl: 'https://groundwaterindia.com/',
+    codeUrl: '',
   },
   {
-    title: 'Namo Solar Energy',
+    title: 'Nano Solar Energy',
     description:
-      'Another project summary. Mention the tech stack and one interesting detail about how you built it.',
-    tags: ['Wordpress', 'Acf Field', 'Html', 'Css', 'javascript', 'Php', 'MySQl','Elementor'],
+      'A modern website for a solar energy company showcasing services and projects. Focused on performance, UI design, and user engagement.',
+    tags: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'PHP'],
     image: '',
     liveUrl: 'https://namosolarenergy.com/',
     codeUrl: '',
   },
   {
-    title: 'Khola Constructions Pvt. Ltd',
+    title: 'Aghanya',
     description:
-      'A third project. Replace this whole file with your real projects whenever you are ready.',
-    tags: ['Wordpress', 'Acf Field', 'Html', 'Css', 'javascript', 'Php', 'MySQl'],
+      'A business website developed to represent brand identity online. Includes responsive layout and optimized user experience.',
+    tags: ['WordPress', 'HTML', 'CSS', 'JavaScript'],
     image: '',
-    liveUrl: 'https://kholaconstructions.in/',
+    liveUrl: 'https://aghanya.in/',
     codeUrl: '',
   },
-   {
-    title: 'MedivizPharma',
+  {
+    title: 'Mediviz Pharma',
     description:
-      'A third project. Replace this whole file with your real projects whenever you are ready.',
-    tags: ['React', 'Tailwind Css', 'Html', 'javascript', ],
+      'A healthcare-based website designed to provide product and service details. Built with clean UI and easy navigation.',
+    tags: ['WordPress', 'HTML', 'CSS', 'PHP', 'MySQL'],
     image: '',
     liveUrl: 'https://medivizpharma.com/',
     codeUrl: '',
   },
-   {
+  {
     title: 'Spatial Thoughts',
     description:
-      'A third project. Replace this whole file with your real projects whenever you are ready.',
-    tags: ['Wordpress', 'Acf Field', 'Html', 'Css', 'javascript', 'Php', 'MySQl'],
+      'A creative portfolio-style website for showcasing ideas and projects. Designed with modern UI and smooth user interaction.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
     image: '',
     liveUrl: 'https://spatialthoughts.co.uk/',
     codeUrl: '',
   },
   {
-    title: 'Rotary Club of Stratford',
+    title: 'Khola Constructions',
     description:
-      'A third project. Replace this whole file with your real projects whenever you are ready.',
-    tags: [ 'Html', 'Css', 'javascript', 'Php', 'MySQl'],
+      'A construction company website to highlight services and past projects. Focused on professional design and mobile responsiveness.',
+    tags: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'PHP'],
     image: '',
-    liveUrl: 'https://www.rotarystratford.london/',
+    liveUrl: 'https://kholaconstructions.in/',
     codeUrl: '',
   },
 ]

@@ -1,8 +1,9 @@
 import profile from '../data/profile'
+import PolygonNet from './PolygonNet'
 
 const links = [
   { label: 'About',    href: '#about'    },
-  { label: 'Skills',   href: '#skills'   },
+  { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact',  href: '#contact'  },
 ]
@@ -10,19 +11,22 @@ const links = [
 const socials = [
   { label: 'GitHub',   icon: '⌥', href: (p) => p.social.github   },
   { label: 'LinkedIn', icon: '💼', href: (p) => p.social.linkedin },
-  { label: 'Twitter',  icon: '𝕏',  href: (p) => p.social.twitter  },
 ]
 
 export default function Footer() {
   return (
     <footer className="footer">
+
+      {/* ── polygon canvas ── */}
+      <div className="footer-polygon-layer">
+        <PolygonNet />
+      </div>
+
+      {/* ── amber glow blob top-center ── */}
+      <div className="footer-blob fb1" />
+      <div className="footer-blob fb2" />
+
       <div className="footer-content wrap">
-        {/* Logo */}
-        <div className="footer-logo">
-          <span className="footer-logo-bracket">&lt;</span>
-          {profile.name}
-          <span className="footer-logo-bracket">/&gt;</span>
-        </div>
 
         {/* Nav links */}
         <nav>
@@ -52,12 +56,16 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Divider */}
+        <div className="footer-divider" />
+
         {/* Copyright */}
         <p className="footer-copy">
           © {new Date().getFullYear()}&nbsp;
-          <a href="#top">{profile.name}</a>.
-          &nbsp;Built with React &amp; ❤️. All rights reserved.
+          <a href="#top">{profile.name}</a>.&nbsp;
+          Open for freelance &amp; full-time opportunities.
         </p>
+
       </div>
     </footer>
   )

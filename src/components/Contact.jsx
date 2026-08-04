@@ -4,14 +4,13 @@ import PolygonNet from './PolygonNet'
 
 // ─────────────────────────────────────────────────────────────
 // 👇 Formspree se form banao (formspree.io) aur apna URL yahan daalo
-const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID'
+const FORMSPREE_URL = 'https://formspree.io/f/xqerrgbk'
 // Example: 'https://formspree.io/f/xyzabcde'
 // ─────────────────────────────────────────────────────────────
 
 const socials = [
   { label: 'GitHub',   icon: '⌥', href: (p) => p.social.github         },
   { label: 'LinkedIn', icon: '💼', href: (p) => p.social.linkedin       },
-  { label: 'Twitter',  icon: '𝕏',  href: (p) => p.social.twitter        },
   { label: 'Email',    icon: '✉️', href: (p) => `mailto:${p.email}`     },
 ]
 
@@ -90,7 +89,7 @@ export default function Contact() {
             <span>✉️</span>
             <span>Email me directly</span>
           </a>
-          <a className="btn" href={profile.social.linkedin} target="_blank" rel="noreferrer">
+          <a className="btn" href="https://www.linkedin.com/in/gajesh-sharma-05702b266" target="_blank" rel="noreferrer">
             <span>💼</span>
             <span>LinkedIn</span>
           </a>

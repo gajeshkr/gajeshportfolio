@@ -20,19 +20,36 @@ function useCountUp(target, duration = 1600, inView = false) {
 }
 
 /* ── tab content ── */
-const TABS = ['Skills', 'Experience', 'Credentials']
+const TABS = ['Skills', 'Experience']
 
 const experienceItems = [
-  { year: '2023 – Present', role: 'Web Developer', place: 'Freelance' },
-  { year: '2022 – 2023',    role: 'WordPress Developer', place: 'Agency Project' },
-  { year: '2021 – 2022',    role: 'Frontend Intern', place: 'Local Startup' },
+  {
+    year:  '2026 – Present',
+    role:  'Web Developer',
+    place: 'GWMICC Pvt. Ltd.',
+    desc:  'Currently working as a Web Developer — handling development, maintenance, and new feature implementation.',
+  },
+  {
+    year:  'Mar 2023 – Jun 2026',
+    role:  'Web / WordPress Developer',
+    place: 'Web Infosoftware',
+    desc:  'Developed and maintained WordPress websites, custom themes, ACF-based layouts, and PHP backends for multiple clients.',
+  },
+  {
+    year:  '2022 – Early 2023',
+    role:  'Web Developer Intern',
+    place: 'KSJ Infotech',
+    desc:  'Completed a 3-month internship working on live web projects using HTML, CSS, JavaScript, and PHP.',
+  },
+  {
+    year:  '2022 (6 Months)',
+    role:  'Core PHP Course',
+    place: 'Technoglobe, Jaipur',
+    desc:  'Completed a 6-month professional course in Core PHP covering OOP, MySQL, form handling, and dynamic web development.',
+  },
 ]
 
-const credentialItems = [
-  { title: 'Web Development Bootcamp', issuer: 'Udemy', year: '2022' },
-  { title: 'Responsive Web Design',    issuer: 'freeCodeCamp', year: '2021' },
-  { title: 'JavaScript Algorithms',    issuer: 'freeCodeCamp', year: '2021' },
-]
+
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('Skills')
@@ -48,10 +65,10 @@ export default function About() {
     return () => obs.disconnect()
   }, [])
 
-  const years     = useCountUp(3,  1200, inView)
-  const clients   = useCountUp(20, 1500, inView)
-  const projects  = useCountUp(30, 1800, inView)
-  const techSkills= useCountUp(15, 1400, inView)
+  const years      = useCountUp(4,   1200, inView)
+  const clients    = useCountUp(100, 1800, inView)
+  const projects   = useCountUp(200, 2000, inView)
+  const techSkills = useCountUp(15,  1400, inView)
 
   return (
     <section className="section about2-section" id="about">
@@ -140,6 +157,7 @@ export default function About() {
                       <div>
                         <div className="about2-exp-role">{item.role}</div>
                         <div className="about2-exp-place">{item.place}</div>
+                        <div className="about2-exp-desc">{item.desc}</div>
                         <div className="about2-exp-year">{item.year}</div>
                       </div>
                     </div>
@@ -147,20 +165,7 @@ export default function About() {
                 </div>
               )}
 
-              {/* ── Credentials ── */}
-              {activeTab === 'Credentials' && (
-                <div className="about2-cred-list">
-                  {credentialItems.map((item, i) => (
-                    <div className="about2-cred-item" key={i}>
-                      <div className="about2-cred-icon">🏆</div>
-                      <div>
-                        <div className="about2-cred-title">{item.title}</div>
-                        <div className="about2-cred-meta">{item.issuer} · {item.year}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
+              {/* ── Credentials removed ── */}
 
             </div>
 

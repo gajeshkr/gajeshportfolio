@@ -1,35 +1,17 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef } from 'react'
 import profile from '../data/profile'
 import PolygonNet from './PolygonNet'
 
 export default function Hero() {
-  const heroRef   = useRef(null)
-  const mouseRef  = useRef({ x: -9999, y: -9999 })
-  const [typedText, setTypedText] = useState('')
-  const fullText = profile.role
+  const heroRef = useRef(null)
 
-  /* ── spotlight (pass coords to canvas section) ── */
   const handleMouseMove = (e) => {
     const el = heroRef.current
     if (!el) return
     const rect = el.getBoundingClientRect()
     el.style.setProperty('--mx', `${((e.clientX - rect.left) / rect.width) * 100}%`)
     el.style.setProperty('--my', `${((e.clientY - rect.top) / rect.height) * 100}%`)
-    mouseRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top }
   }
-
-  /* ── typing animation ── */
-  useEffect(() => {
-    let i = 0
-    const timer = setTimeout(() => {
-      const iv = setInterval(() => {
-        if (i <= fullText.length) { setTypedText(fullText.slice(0, i)); i++ }
-        else clearInterval(iv)
-      }, 100)
-      return () => clearInterval(iv)
-    }, 800)
-    return () => clearTimeout(timer)
-  }, [fullText])
 
   return (
     <section
@@ -63,11 +45,7 @@ export default function Hero() {
           <h1 className="hero-title">
             Transforming Ideas
             <span className="line2">
-              Into&nbsp;
-              <span className="hero-accent">
-                {typedText}
-                <span className="hero-cursor-blink" />
-              </span>
+              Into&nbsp;<span className="hero-accent">Modern Web Experiences</span>
             </span>
           </h1>
 

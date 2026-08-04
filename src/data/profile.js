@@ -7,9 +7,9 @@ const profile = {
   email: 'gajeshsharma399@gmail.com',
   resumeUrl: '', // put a link to your resume PDF here, e.g. '/resume.pdf'
   social: {
-    github: 'https://github.com/yourusername',
-    linkedin: 'https://linkedin.com/in/yourusername',
-    twitter: 'https://twitter.com/yourusername',
+    github:   'https://github.com/gajeshkr/',
+    linkedin: 'https://www.linkedin.com/in/gajesh-sharma-05702b266',
+    twitter:  '',
   },
   about: `I'm a developer who enjoys turning ideas into working products.
 I care about clean code, fast interfaces, and solving real problems.

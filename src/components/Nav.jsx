@@ -92,7 +92,7 @@ export default function Nav() {
           </li>
         </ul>
 
-        <a className="nav-cta" href="#contact">
+        <a className="nav-cta" href="tel:+917891162667">
           Let's talk
         </a>
 
