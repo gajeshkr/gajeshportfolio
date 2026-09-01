@@ -9,7 +9,7 @@ const projects = [
     codeUrl: '',
   },
   {
-    title: 'Nano Solar Energy',
+    title: 'Namo Solar Energy',
     description:
       'A modern website for a solar energy company showcasing services and projects. Focused on performance, UI design, and user engagement.',
     tags: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'PHP'],
